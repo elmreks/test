@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>v0.3 – MELTDOWN MODE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: system-ui, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: black;
+    }
+
+    /* TRIPPY VORTEX */
+    .vortex {
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background: conic-gradient(
+        #ff006e,
+        #ffbe0b,
+        #fb5607,
+        #8338ec,
+        #3a86ff,
+        #ff006e
+      );
+      animation: spin 8s linear infinite;
+      filter: blur(140px);
+      z-index: -30;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* PULSING GLOW */
+    .pulse {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle, rgba(255,255,255,0.12), transparent);
+      animation: breathe 4s ease-in-out infinite;
+      z-index: -20;
+    }
+    @keyframes breathe {
+      0%, 100% { opacity: 0.2; }
+      50% { opacity: 0.7; }
+    }
+
+    /* STARFIELD */
+    .stars {
+      position: fixed;
+      width: 200%;
+      height: 200%;
+      background:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 1px, transparent 1px);
+      background-size: 3px 3px, 2px 2px;
+      background-position: 0 0, 1px 1px;
+      animation: drift 40s linear infinite;
+      opacity: 0.4;
+      z-index: -10;
+    }
+    @keyframes drift {
+      from { transform: translate(0,0); }
+      to { transform: translate(-300px, -300px); }
+    }
+
+    /* CARD */
+    .card {
+      background: rgba(0,0,0,0.6);
+      padding: 3rem;
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.3);
+      backdrop-filter: blur(18px);
+      text-align: center;
+      z-index: 10;
+    }
+
+    .button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.2rem;
+      background: rgba(255,255,255,0.2);
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="vortex"></div>
+  <div class="pulse"></div>
+  <div class="stars"></div>
+
+  <div class="card">
+    <h1>v0.3 – MELTDOWN MODE</h1>
+    <p>This page is on drugs.</p>
+    <p>All effects. At the same time. No survivors.</p>
+    <button class="button" onclick="location.href='index.html'">Back</button>
+  </div>
+
+</body>
+</html>
