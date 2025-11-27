@@ -52,3 +52,37 @@
       background: rgba(0, 0, 0, 0.65);
       backdrop-filter: blur(12px);
       text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      max-width: 560px;
+      z-index: 10;
+    }
+
+    .button {
+      margin-top: 1rem;
+      padding: 0.7rem 1.3rem;
+      font-size: 1rem;
+      border-radius: 12px;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      background: rgba(255,255,255,0.15);
+      transition: 0.2s;
+    }
+    .button:hover {
+      background: rgba(255,255,255,0.25);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="trippy-bg"></div>
+
+  <div class="card">
+    <h1>Ethan Built This Shit</h1>
+    <p>This is the psychedelic hub.</p>
+
+    <button class="button" onclick="location.href='v0.1.html'">v0.1 – The OG</button>
+    <button class="button" onclick="location.href='v0.3.html'">v0.3 – MELTDOWN MODE</button>
+  </div>
+</body>
+</html>
